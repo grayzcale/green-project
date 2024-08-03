@@ -88,13 +88,13 @@ const Login = () => {
                     alt="Samsung fitness sign in"
                   />
                 </button>
-                <button className="p-4 mx-6 border">
+                {/* <button className="p-4 mx-6 border">
                   <img
                     src="/images/google_health.png"
                     className="w-8 h-8"
                     alt="Google fit sign in"
                   />
-                </button>
+                </button> */}
                 <button className="p-4 mx-6 border">
                   <img
                     src="/images/apple.png"
