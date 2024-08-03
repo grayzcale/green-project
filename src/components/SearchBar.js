@@ -45,6 +45,7 @@ const SearchBar = (props) => {
             {searchData.map((posting, idx) => {
               return (
                 <span
+                  id={idx + posting.title}
                   key={idx + posting.title}
                   className="results  block bg-[#DFEBBD] border-b w-96 border-black p-2"
                 >

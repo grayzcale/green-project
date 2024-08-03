@@ -29,11 +29,11 @@ const Footer = (props) => {
   return (
     <footer className="sb">
       <div className="flex flex-row items-center justify-center">
-        <Link to="/" className="p-5">
+        <Link to="/" className={`${location.pathname==="/" ? "bg-[#79b859]" : ""} p-4`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            stroke="#79B859"
+            stroke={`${location.pathname==="/" ? "#ffffff" : "#79B859"}`}
             strokeWidth="1.25"
             className="w-10 h-10"
             aria-hidden="true"
@@ -47,11 +47,11 @@ const Footer = (props) => {
             />
           </svg>
         </Link>
-        <Link to="/stats" className="p-5">
+        <Link to="/stats" className={`${location.pathname==="/stats" ? "bg-[#79B859]" : ""} p-4`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            stroke="#79B859"
+            stroke={`${location.pathname==="/stats" ? "#ffffff" : "#79B859"}`}
             className="w-10 h-10"
             strokeWidth="1.25"
             aria-hidden="true"
@@ -70,16 +70,16 @@ const Footer = (props) => {
             />
           </svg>
         </Link>
-        <Link to="/air-quality" className="p-5">
+        <Link to="/air-quality" className={`${location.pathname==="/air-quality" ? "bg-[#79B859]" : ""} p-4`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 -3 20 20"
-            stroke="#79B859"
+            stroke={`${location.pathname==="/air-quality" ? "#ffffff" : "#79B859"}`}
             className="w-10 h-10"
           >
             <g
               fill="none"
-              stroke="#79B859"
+              stroke={`${location.pathname==="/air-quality" ? "#ffffff" : "#79B859"}`}
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="1.25"
@@ -92,11 +92,11 @@ const Footer = (props) => {
             </g>
           </svg>
         </Link>
-        <Link to="/forum" className="p-5">
+        <Link to="/forum" className={`${location.pathname==="/forum" ? "bg-[#79B859]" : ""} p-4`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            stroke="#79B859"
+            stroke={`${location.pathname==="/forum" ? "#ffffff" : "#79B859"}`}
             className="w-10 h-10"
             strokeWidth="1.25"
             aria-hidden="true"
@@ -112,7 +112,7 @@ const Footer = (props) => {
         </Link>
         {userMenu && (
           <div className="absolute right-0 mb-36 bg-gray-200 w-40">
-            <div className="flex flex-col p-5">
+            <div className="flex flex-col p-4">
               <Link
                 to="/logout"
                 className="text-gray-700 text-lg flex space-x-2"
@@ -142,7 +142,7 @@ const Footer = (props) => {
             onClick={() => {
               setMobileMenu(!mobileMenu);
             }}
-            className={`${mobileMenu ? "hidden" : ""} p-5`}
+            className={`${mobileMenu ? "hidden" : ""} p-4`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +168,7 @@ const Footer = (props) => {
                 onClick={() => {
                   setMobileMenu(!mobileMenu);
                 }}
-                className={`${mobileMenu ? "" : "hidden"} p-5`}
+                className={`${mobileMenu ? "" : "hidden"} p-4`}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
