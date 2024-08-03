@@ -1,10 +1,30 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
+import Cookies from "js-cookie";
 
 const Footer = (props) => {
   const [userMenu, setUserMenu] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
+  
+  
+  const location = useLocation();
+  const [userToken, setUserToken] = useState();
+
+  useEffect(() => {
+    if (Cookies.get("userToken") && location.pathname === "/logout") {
+      Cookies.remove("userToken");
+    }
+  }, [location.pathname]);
+
+  useEffect(() => {
+    setUserToken(Cookies.get("userToken"));
+  }, [location.pathname, location]);
+
+  if (!userToken) {
+    return <></>;
+  }
+
   return (
     <footer className="bg-white border-t-2 ">
       <div className="flex flex-row items-center justify-center">
