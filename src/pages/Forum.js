@@ -27,20 +27,15 @@ const Forum = () => {
       </button>
 
       {conversations.map((conv, ind) => (
-        // <div
-        //   id={ind}
-        //   key={ind}
-        //   className="flex flex-col space-x-5 border-2 rounded-lg m-5 p-5"
-        // >
           <Conversation
             id={ind}
+            key={ind}
             title={conv.title}
             body={conv.body}
             up={conv.up}
             down={conv.down}
             comment={conv.comment}
           />
-        // </div>
       ))}
     </div>
   );
