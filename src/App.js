@@ -13,6 +13,7 @@ import Account from "./pages/Account";
 import Contact from "./pages/Contact";
 import Setting from "./pages/Setting";
 import SentEmail from "./pages/SentEmail";
+import DeleteAccount from "./pages/DeleteAccount";
 
 import Layout from "./components/Layout";
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/settings" element={<Setting />} />
           <Route path="/email_sent" element={<SentEmail />} />
           <Route path="/redirect" element={<Navigate to="/login" />} />
+		  <Route path="/delete_account" element={<DeleteAccount />} />
         </Route>
       </Routes>
     </BrowserRouter>

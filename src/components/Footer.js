@@ -12,7 +12,7 @@ const Footer = (props) => {
   const [userToken, setUserToken] = useState();
 
   useEffect(() => {
-    if (Cookies.get("userToken") && location.pathname === "/logout") {
+    if (Cookies.get("userToken") && (location.pathname === "/logout" || location.pathname === "/delete_account")) {
       Cookies.remove("userToken");
     }
   }, [location.pathname]);
