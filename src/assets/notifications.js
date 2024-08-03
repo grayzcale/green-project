@@ -1,8 +1,4 @@
 export const notifications = [
-    //   {
-    //     title: "Home",
-    //     url: "/",
-    //   },
       {
         notification: "notification 1",
       },

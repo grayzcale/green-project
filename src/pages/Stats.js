@@ -9,9 +9,9 @@ const Stats = () => {
 	const changeGraphRangeR = (event, dir) => {
 		const currIndex = ranges.indexOf(graphRange)
 		let newIndex = 0
-		if (dir == 1) {
+		if (dir === 1) {
 			newIndex = currIndex === ranges.length - 1 ? 0 : currIndex + 1;
-		} else if (dir == -1) {
+		} else if (dir === -1) {
 			newIndex = currIndex === 0 ? ranges.length - 1 : currIndex - 1;
 		}
 		setGraphRange(ranges[newIndex]);
@@ -28,11 +28,11 @@ const Stats = () => {
 				<div className="">
 					<div className='grid grid-cols-3'>
 						<button onClick={(event) => changeGraphRangeR(event, -1)}>
-							<img className='size-5 mx-auto' src="images/left-arrow.png"/>
+							<img className='size-5 mx-auto' src="images/left-arrow.png" alt="left arrow"/>
 						</button>
 						<span className='block w-full text-center italic'>{graphRange.charAt(0).toUpperCase() + graphRange.slice(1)}</span>
 						<button onClick={(event) => changeGraphRangeR(event, 1)}>
-							<img className='size-5 mx-auto' src="images/right-arrow.png"/>
+							<img className='size-5 mx-auto' src="images/right-arrow.png" alt="right arrow"/>
 						</button>
 					</div>
 					{graphRange === "monthly" && (
@@ -59,7 +59,7 @@ const Stats = () => {
 							<option>...</option>
 						</select>
 					)}
-					<img src="/images/placeholder_chart.png" />
+					<img src="/images/placeholder_chart.png" alt="graph result"/>
 					<div className="grid px-2 grid-cols-4 grid-rows-1 text-xs">
 						<span className="text-center font-bold">
 							Public Transportation
