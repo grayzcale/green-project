@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Landing_Page from "./pages/landing_page";
 import AirQuality from "./pages/AirQuality";
 import Home from "./pages/Home";
@@ -13,6 +13,7 @@ import Account from "./pages/Account";
 import Contact from "./pages/Contact";
 import Setting from "./pages/Setting";
 import SentEmail from "./pages/SentEmail";
+import DeleteAccount from "./pages/DeleteAccount";
 
 import Layout from "./components/Layout";
 
@@ -22,16 +23,18 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-		  <Route path="/stats" element={<Stats />} />
+          <Route path="/stats" element={<Stats />} />
           <Route path="/air-quality" element={<AirQuality />} />
           <Route path="/forum" element={<Forum />} />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/sign-up" element={<Signup />} />
-		  <Route path="/account" element={<Account />} />
-		  <Route path="/contact" element={<Contact />} />
-		  <Route path="/settings" element={<Setting />} />
-		  <Route path="/email_sent" element={<SentEmail />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/settings" element={<Setting />} />
+          <Route path="/email_sent" element={<SentEmail />} />
+          <Route path="/redirect" element={<Navigate to="/login" />} />
+		  <Route path="/delete_account" element={<DeleteAccount />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,10 +1,23 @@
 import React, { useState, useEffect } from "react";
 import NotificationBar from "./NotificationBar";
 import { Link, useLocation } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const Header = (props) => {
   const [userMenu, setUserMenu] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
+  const location = useLocation();
+  const [userToken, setUserToken] = useState();
+
+  useEffect(() => {
+    if (Cookies.get("userToken") && (location.pathname === "/logout" || location.pathname === "/delete_account")) {
+      Cookies.remove("userToken");
+    }
+  }, [location.pathname]);
+
+  useEffect(() => {
+    setUserToken(Cookies.get("userToken"));
+  }, [location.pathname, location]);
 
   return (
     <div>
@@ -75,27 +88,31 @@ const Header = (props) => {
             <img src="images/logo.png" className="h-10 w-20" alt="Logo" />
             {/* <span>EcoTrack</span> */}
           </Link>
-          <button
-            onClick={() => {
-              setMobileMenu(!mobileMenu);
-            }}
-            className={`${mobileMenu ? "hidden" : ""}`}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-10 h-10"
-              stroke="ffffff"
-              fill="none"
-              viewBox="0 0 24 24"
+          {!userToken ? (
+            <></>
+          ) : (
+            <button
+              onClick={() => {
+                setMobileMenu(!mobileMenu);
+              }}
+              className={`${mobileMenu ? "hidden" : ""}`}
             >
-              <path
-                stroke="#1C274C"
-                stroke-linecap="round"
-                stroke-width="1.5"
-                d="M9.107 2.674A6.52 6.52 0 0 1 12 2c3.727 0 6.75 3.136 6.75 7.005v.705a4.4 4.4 0 0 0 .692 2.375l1.108 1.724c1.011 1.575.239 3.716-1.52 4.214a25.775 25.775 0 0 1-14.06 0c-1.759-.498-2.531-2.639-1.52-4.213l1.108-1.725A4.4 4.4 0 0 0 5.25 9.71v-.705c0-1.074.233-2.092.65-3.002M7.5 19c.655 1.748 2.422 3 4.5 3 .245 0 .485-.017.72-.05M16.5 19a4.498 4.498 0 0 1-1.302 1.84"
-              />
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-10 h-10"
+                stroke="ffffff"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="#1C274C"
+                  strokeLinecap="round"
+                  strokeWidth="1.5"
+                  d="M9.107 2.674A6.52 6.52 0 0 1 12 2c3.727 0 6.75 3.136 6.75 7.005v.705a4.4 4.4 0 0 0 .692 2.375l1.108 1.724c1.011 1.575.239 3.716-1.52 4.214a25.775 25.775 0 0 1-14.06 0c-1.759-.498-2.531-2.639-1.52-4.213l1.108-1.725A4.4 4.4 0 0 0 5.25 9.71v-.705c0-1.074.233-2.092.65-3.002M7.5 19c.655 1.748 2.422 3 4.5 3 .245 0 .485-.017.72-.05M16.5 19a4.498 4.498 0 0 1-1.302 1.84"
+                />
+              </svg>
+            </button>
+          )}
           {mobileMenu ? (
             <div className="flex flex-col">
               <button

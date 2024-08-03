@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Cookies from "js-cookie";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -59,6 +60,7 @@ const Login = () => {
           //   }}
           //   disabled={user.email === "" || user.password === ""}
           onClick={() => {
+            Cookies.set("userToken", "someToken");
             navigate("/");
           }}
         >
