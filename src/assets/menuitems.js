@@ -1,8 +1,4 @@
 export const menuItems = [
-//   {
-//     title: "Home",
-//     url: "/",
-//   },
   {
     title: "Account",
     url: "/account",

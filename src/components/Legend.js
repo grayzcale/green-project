@@ -1,6 +1,6 @@
 import "../assets/inner_shadow.css";
 
-const Legend = (props) => {
+const Legend = () => {
   return (
     <div className="flex flex-wrap justify-center space-x-5 m-5 px-5 py-2 bg-[#9FDEEB] rounded-2xl">
       <div>

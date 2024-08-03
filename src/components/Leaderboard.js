@@ -1,4 +1,4 @@
-const Leaderboard = (props) => {
+const Leaderboard = () => {
   return (
     <div className="flex my-4 flex-col justify-center items-center">
       <h1 className="text-lg">Leaderboard</h1>

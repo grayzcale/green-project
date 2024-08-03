@@ -3,7 +3,7 @@ import NotificationBar from "./NotificationBar";
 import { Link, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
 
-const Header = (props) => {
+const Header = () => {
   const [userMenu, setUserMenu] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const location = useLocation();
@@ -93,7 +93,6 @@ const Header = (props) => {
               className="flex self-center text-2xl font-semibold whitespace-nowrap text-black"
             >
               <img src="images/logo.png" className="h-12" alt="Logo" />
-              {/* <span>EcoTrack</span> */}
             </Link>
             <button
               onClick={() => {
