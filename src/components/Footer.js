@@ -26,14 +26,14 @@ const Footer = (props) => {
   }
 
   return (
-    <footer className="bg-white border-t-2 ">
+    <footer className="shadow-2xl rounded-lg">
       <div className="flex flex-row items-center justify-center">
-        <Link to="/" className="p-5 border">
+        <Link to="/" className="p-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            stroke="black"
-            strokeWidth="1.5"
+            stroke="#79B859"
+            strokeWidth="1.25"
             className="w-10 h-10"
             aria-hidden="true"
             data-slot="icon"
@@ -46,13 +46,13 @@ const Footer = (props) => {
             />
           </svg>
         </Link>
-        <Link to="/stats" className="p-5 border">
+        <Link to="/stats" className="p-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            stroke="black"
+            stroke="#79B859"
             className="w-10 h-10"
-            strokeWidth="1.5"
+            strokeWidth="1.25"
             aria-hidden="true"
             data-slot="icon"
             viewBox="0 0 24 24"
@@ -69,19 +69,19 @@ const Footer = (props) => {
             />
           </svg>
         </Link>
-        <Link to="/air-quality" className="p-5 border">
+        <Link to="/air-quality" className="p-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 -3 20 20"
-            stroke="black"
+            stroke="#79B859"
             className="w-10 h-10"
           >
             <g
               fill="none"
-              stroke="#000"
+              stroke="#79B859"
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth="1.5"
+              strokeWidth="1.25"
             >
               <path d="M17 1a2 2 0 0 1 0 4h-6" />
               <path
@@ -91,13 +91,13 @@ const Footer = (props) => {
             </g>
           </svg>
         </Link>
-        <Link to="/forum" className="p-5 border">
+        <Link to="/forum" className="p-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            stroke="black"
+            stroke="#79B859"
             className="w-10 h-10"
-            strokeWidth="1.5"
+            strokeWidth="1.25"
             aria-hidden="true"
             data-slot="icon"
             viewBox="0 0 24 24"
@@ -120,7 +120,7 @@ const Footer = (props) => {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
-                  stroke="currentColor"
+                  stroke="#79B859"
                   className="w-6 h-6"
                   viewBox="0 0 24 24"
                 >
@@ -141,13 +141,13 @@ const Footer = (props) => {
             onClick={() => {
               setMobileMenu(!mobileMenu);
             }}
-            className={`${mobileMenu ? "hidden" : ""} p-5 border`}
+            className={`${mobileMenu ? "hidden" : ""} p-5`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
-              stroke="black"
-              strokeWidth="1.25"
+              stroke="#79B859"
+              strokeWidth="1"
               aria-hidden="true"
               className="w-10 h-10"
               data-slot="icon"
@@ -167,19 +167,19 @@ const Footer = (props) => {
                 onClick={() => {
                   setMobileMenu(!mobileMenu);
                 }}
-                className={`${mobileMenu ? "" : "hidden"} p-5 border`}
+                className={`${mobileMenu ? "" : "hidden"} p-5`}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
-                  stroke="black"
+                  stroke="#79B859"
                   className="w-10 h-10"
                   viewBox="0 0 24 24"
                 >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    strokeWidth="1"
                     d="M6 18 18 6M6 6l12 12"
                   />
                 </svg>
