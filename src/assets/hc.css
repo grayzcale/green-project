@@ -1,6 +1,6 @@
 .hc {
     width: 100px; /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
-    border-radius: 50%;
-    background: radial-gradient(circle, transparent 40%, rgba(0,212,255,1) 41%, rgba(0,212,255,1) 60%, transparent 61%);
+    height: 30px; /* Adjust as needed */
+    border-radius: 50% 50% 0 0; /* Adjust as needed */
+    background: linear-gradient(to right, rgb(248, 0, 0), rgb(0, 255, 21));
 }
