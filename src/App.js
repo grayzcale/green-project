@@ -12,6 +12,7 @@ import Forum from "./pages/Forum";
 import Account from "./pages/Account";
 import Contact from "./pages/Contact";
 import Setting from "./pages/Setting";
+import SentEmail from "./pages/SentEmail";
 
 import Layout from "./components/Layout";
 
@@ -30,6 +31,7 @@ function App() {
 		  <Route path="/account" element={<Account />} />
 		  <Route path="/contact" element={<Contact />} />
 		  <Route path="/settings" element={<Setting />} />
+		  <Route path="/email_sent" element={<SentEmail />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -72,8 +72,8 @@ const Header = (props) => {
             to="/"
             className="flex self-center text-2xl font-semibold whitespace-nowrap text-black"
           >
-            <img src="images/logo.png" className="mr-3 h-8" alt="Logo" />
-            <span>EcoTrack</span>
+            <img src="images/logo.png" className="h-10 w-20" alt="Logo" />
+            {/* <span>EcoTrack</span> */}
           </Link>
           <button
             onClick={() => {
