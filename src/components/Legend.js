@@ -1,26 +1,28 @@
+import "../assets/inner_shadow.css";
+
 const Legend = (props) => {
   return (
-    <div className="flex flex-wrap justify-center space-x-5 m-5 px-5 py-2 bg-[#57A773] rounded-2xl">
+    <div className="flex flex-wrap justify-center space-x-5 m-5 px-5 py-2 bg-[#9FDEEB] rounded-2xl">
       <div>
         <div className="flex items-center my-1 justify-center md:columns-3 md:block">
-          <h1 className="text-base">Legend</h1>
+          <h1 className="text-base font-bold">Legend</h1>
           <div className="flex">
-            <div className="bg-[#FF0000] p-1 mx-3"></div>
-            <p className="text-[#484D6D] text-xs">Unhealthy</p>
+            <div className="bg-[#cb3838] p-3 mx-3 rounded-full is"></div>
+            <p className="text-xs rounded-full">Unhealthy</p>
           </div>
           <div className="flex">
-            <div className="bg-[#FEE400] p-1 mx-3"></div>
-            <p className="text-[#484D6D] text-xs">Moderate</p>
+            <div className="bg-[#FEE400] p-3 mx-3 rounded-full is"></div>
+            <p className="text-xs">Moderate</p>
           </div>
         </div>
         <div className="flex items-center justify-center md:columns-3 md:block">
           <div className="flex">
-            <div className="bg-[#FF9900] p-1 mx-3"></div>
-            <p className="text-[#484D6D] text-xs">Unhealthy Sensitive</p>
+            <div className="bg-[#FF9900] p-3 mx-3 rounded-full is"></div>
+            <p className="text-xs">Unhealthy Sensitive</p>
           </div>
           <div className="flex">
-            <div className="bg-[#22C514] p-1 mx-3"></div>
-            <p className="text-[#484D6D] text-xs">Healthy</p>
+            <div className="bg-[#22C514] p-3 mx-3 rounded-full is"></div>
+            <p className="text-xs">Healthy</p>
           </div>
         </div>
       </div>
