@@ -1,5 +1,11 @@
+import ScorePoint from "../components/ScorePoint";
+
 const Stats = () => {
-    return <h1>tdsafsest</h1>;
-  };
-  
+  return (
+    <div className="flex flex-wrap justify-center space-x-5 border-2 rounded-lg m-5 p-5">
+      <ScorePoint />
+    </div>
+  );
+};
+
 export default Stats;

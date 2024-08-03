@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
+import ScorePoint from "../components/ScorePoint";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -9,6 +9,7 @@ const Home = () => {
         <main>
           <div className="">
             <div className="flex flex-col items-center justify-center md:columns-3 md:block">
+              <ScorePoint />
               {/* {menus.map((menu) => (
                 <button
                   className="lg:w-80 lg:h-50 rounded-lg hover:bg-orange-500 flex flex-col justify-center items-center p-4"
