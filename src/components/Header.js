@@ -10,7 +10,11 @@ const Header = (props) => {
   const [userToken, setUserToken] = useState();
 
   useEffect(() => {
-    if (Cookies.get("userToken") && (location.pathname === "/logout" || location.pathname === "/delete_account")) {
+    if (
+      Cookies.get("userToken") &&
+      (location.pathname === "/logout" ||
+        location.pathname === "/delete_account")
+    ) {
       Cookies.remove("userToken");
     }
   }, [location.pathname]);
@@ -79,18 +83,18 @@ const Header = (props) => {
       </header>
 
       {/* Mobile */}
-      <header className="bg-white md:hidden">
-        <div className="flex justify-between py-2 md:py-0 sb">
-          <Link
-            to="/"
-            className="flex self-center text-2xl font-semibold whitespace-nowrap text-black"
-          >
-            <img src="images/logo.png" className="h-12" alt="Logo" />
-            {/* <span>EcoTrack</span> */}
-          </Link>
-          {!userToken ? (
-            <></>
-          ) : (
+      {!userToken ? (
+        <></>
+      ) : (
+        <header className="bg-white md:hidden">
+          <div className="flex justify-between py-2 md:py-0 sb">
+            <Link
+              to="/"
+              className="flex self-center text-2xl font-semibold whitespace-nowrap text-black"
+            >
+              <img src="images/logo.png" className="h-12" alt="Logo" />
+              {/* <span>EcoTrack</span> */}
+            </Link>
             <button
               onClick={() => {
                 setMobileMenu(!mobileMenu);
@@ -112,35 +116,36 @@ const Header = (props) => {
                 />
               </svg>
             </button>
-          )}
-          {mobileMenu ? (
-            <div className="flex flex-col">
-              <button
-                onClick={() => {
-                  setMobileMenu(!mobileMenu);
-                }}
-                className={`${mobileMenu ? "" : "hidden"} ml-20`}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  stroke="#79B859"
-                  className="w-10 h-10"
-                  viewBox="0 0 24 24"
+
+            {mobileMenu ? (
+              <div className="flex flex-col">
+                <button
+                  onClick={() => {
+                    setMobileMenu(!mobileMenu);
+                  }}
+                  className={`${mobileMenu ? "" : "hidden"} ml-20`}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1"
-                    d="M6 18 18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-              <NotificationBar additionalStyles="space-y-4 py-2 bg-gray-200 absolute space-x-4 text-gray-700 w-[120px] mt-2 " />
-            </div>
-          ) : null}
-        </div>
-      </header>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    stroke="#79B859"
+                    className="w-10 h-10"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1"
+                      d="M6 18 18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+                <NotificationBar additionalStyles="space-y-4 py-2 bg-gray-200 absolute space-x-4 text-gray-700 w-[120px] mt-2 " />
+              </div>
+            ) : null}
+          </div>
+        </header>
+      )}
     </div>
   );
 };
