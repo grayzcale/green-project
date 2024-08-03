@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Landing_Page from "./pages/landing_page";
+import LandingPage from "./components/LandingPage";
 import AirQuality from "./pages/AirQuality";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -34,7 +34,8 @@ function App() {
           <Route path="/settings" element={<Setting />} />
           <Route path="/email_sent" element={<SentEmail />} />
           <Route path="/redirect" element={<Navigate to="/login" />} />
-		  <Route path="/delete_account" element={<DeleteAccount />} />
+          <Route path="/delete_account" element={<DeleteAccount />} />
+          <Route path="/landing_page" element={<LandingPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
