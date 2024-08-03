@@ -76,46 +76,49 @@ const Login = () => {
           </button>
         </div>
 
-        <div className="flex flex-wrap justify-center space-x-5 m-5 p-5">
-          <div>
-            <div className="flex mb-8 items-center justify-center md:columns-3 md:block">
-              <button className="px-6 py-4 mx-6 border">
-                <img
-                  src="/images/logo.png"
-                  className="mr-3 h-8"
-                  alt="Samsung fitness sign in"
-                />
-              </button>
-              <button className="px-6 py-4 mx-6 border">
-                <img
-                  src="/images/logo.png"
-                  className="mr-3 h-8"
-                  alt="Google fit sign in"
-                />
-              </button>
-              <button className="px-6 py-4 mx-6 border">
-                <img
-                  src="/images/logo.png"
-                  className="mr-3 h-8"
-                  alt="Apple sign in"
-                />
-              </button>
-            </div>
-            <div className="flex items-center justify-center md:columns-3 md:block">
-              <button className="px-2 py-4 mx-6 border">
-                <img
-                  src="/images/logo.png"
-                  className="mr-3 h-8"
-                  alt="Google sign in"
-                />
-              </button>
-              <button className="px-2 py-4 mx-6 border">
-                <img
-                  src="/images/logo.png"
-                  className="mr-3 h-8"
-                  alt="Presto sign in"
-                />
-              </button>
+        <div className="flex flex-col justify-center items-center pt-2">
+          <p>Sign up partners</p>
+          <div className="flex flex-wrap justify-center space-x-5 m-5 p-5">
+            <div>
+              <div className="flex mb-8 items-center justify-center md:columns-3 md:block">
+                <button className="p-4 mx-6 border">
+                  <img
+                    src="/images/samsung.png"
+                    className="w-8 h-8"
+                    alt="Samsung fitness sign in"
+                  />
+                </button>
+                <button className="p-4 mx-6 border">
+                  <img
+                    src="/images/google_health.png"
+                    className="w-8 h-8"
+                    alt="Google fit sign in"
+                  />
+                </button>
+                <button className="p-4 mx-6 border">
+                  <img
+                    src="/images/apple.png"
+                    className="w-8 h-8"
+                    alt="Apple sign in"
+                  />
+                </button>
+              </div>
+              <div className="flex items-center justify-center md:columns-3 md:block">
+                <button className="p-4 mx-6 border">
+                  <img
+                    src="/images/google.png"
+                    className="w-8 h-8"
+                    alt="Google sign in"
+                  />
+                </button>
+                <button className="p-4 mx-6 border">
+                  <img
+                    src="/images/presto.png"
+                    className=" w-8 h-8"
+                    alt="Presto sign in"
+                  />
+                </button>
+              </div>
             </div>
           </div>
         </div>
