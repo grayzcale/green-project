@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import ScorePoint from "../components/ScorePoint";
-import "../assets/palette.css";
+import "../assets/hc.css";
 
 const Stats = () => {
 
@@ -20,6 +20,10 @@ const Stats = () => {
 	return (
 		<div>
 			<ScorePoint />
+			<div className="flex flex-wrap justify-center space-x-5 border-2 rounded-lg m-5 p-5">
+				<div className='hc'>
+				</div>
+			</div>
 			<div className="flex flex-wrap justify-center space-x-5 border-2 rounded-lg m-5 p-5">
 				<div className="">
 					<div className='grid grid-cols-3'>
