@@ -72,7 +72,7 @@ const Header = (props) => {
             to="/"
             className="flex self-center text-2xl font-semibold whitespace-nowrap text-black"
           >
-            <img src="/images/logo.png" className="mr-3 h-8" alt="Logo" />
+            <img src="images/logo.png" className="mr-3 h-8" alt="Logo" />
             <span>EcoTrack</span>
           </Link>
           <button
