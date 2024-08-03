@@ -2,7 +2,7 @@ const Conversation = (props) => {
   return (
     <div className="" key={props.id}>
       <h1 className="text-lg">{props.title}</h1>
-      <div>{props.body}</div>
+      <p className="">{props.body}</p>
       <div className="flex">
         <div className="mx-4">
           <button>
