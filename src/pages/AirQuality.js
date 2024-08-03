@@ -11,7 +11,7 @@ const AirQuality = () => {
       />
       <Legend />
       <div className="flex items-center justify-center mx-6">
-        <img src="/images/air_pollution.png" alt="air pollution" className="" />
+        <iframe className="w-full" src="https://waqi.info/" title="Air Quality Index" height="500px" scrolling="no"></iframe>
       </div>
       <Leaderboard />
     </div>
