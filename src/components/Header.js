@@ -27,7 +27,7 @@ const Header = () => {
     <div>
       {/* Regular */}
       <header className="p-4 sm:p-6 bg-black hidden md:inline">
-        <div className="flex justify-center py-2 md:py-0">
+        <div className="flex justify-center py-6 md:py-0">
           <Link to="/" className="text-white">
             <img src="/images/logo.png" className="mr-3 h-8" alt="Logo" />
           </Link>
@@ -87,18 +87,18 @@ const Header = () => {
         <></>
       ) : (
         <header className="bg-white md:hidden">
-          <div className="flex justify-between py-2 md:py-0 sb">
+          <div className="flex justify-between items-center py-5 md:py-0 sb">
             <Link
               to="/"
-              className="flex self-center text-2xl font-semibold whitespace-nowrap text-black"
+              className="flex self-center text-2xl mt-2 font-semibold whitespace-nowrap text-black"
             >
-              <img src="images/logo.png" className="h-12" alt="Logo" />
+              <img src="images/logo.png" className="h-16" alt="Logo" />
             </Link>
             <button
               onClick={() => {
                 setMobileMenu(!mobileMenu);
               }}
-              className={`${mobileMenu ? "hidden" : ""}`}
+              className={`${mobileMenu ? "hidden" : " mr-2"}`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
