@@ -1,5 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Landing_Page from "./pages/landing_page";
+
+function App() {
+  return (
+	<BrowserRouter>
+	  <Routes>
+		<Route path="/" element={<Landing_Page />}>
+		  {/* <Route index element={<Home />} />
+		  <Route path="blogs" element={<Blogs />} />
+		  <Route path="contact" element={<Contact />} />
+		  <Route path="*" element={<NoPage />} /> */}
+		</Route>
+	  </Routes>
+	</BrowserRouter>
+  );
+}
 
 // function App() {
 //   return (
@@ -22,12 +39,12 @@ import './App.css';
 //   );
 // }
 
-function App() {
-	return (
-		<h1 className="text-3xl font-bold underline">
-			Hello world!
-		</h1>
-	)
-}
+// function App() {
+// 	return (
+// 		<h1 className="text-3xl font-bold underline">
+// 			Hello world!
+// 		</h1>
+// 	)
+// }
 
 export default App;
