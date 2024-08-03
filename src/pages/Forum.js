@@ -10,15 +10,15 @@ const Forum = () => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             stroke="currentColor"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             aria-hidden="true"
             className="w-6 h-6"
             data-slot="icon"
             viewBox="0 0 24 24"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               d="M12 4.5v15m7.5-7.5h-15"
             />
           </svg>
@@ -26,7 +26,7 @@ const Forum = () => {
       </div>
 
       {conversations.map((conv, ind) => (
-        <div className="flex flex-col space-x-5 border-2 rounded-lg m-5 p-5">
+        <div id={ind} key={ind} className="flex flex-col space-x-5 border-2 rounded-lg m-5 p-5">
           <Conversation
             id={ind}
             title={conv.title}
