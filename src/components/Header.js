@@ -79,13 +79,13 @@ const Header = (props) => {
       </header>
 
       {/* Mobile */}
-      <header className="p-4 sm:p-6  bg-white md:hidden">
-        <div className="flex justify-between py-2 md:py-0 border-b-2">
+      <header className="bg-white md:hidden">
+        <div className="flex justify-between py-2 md:py-0 sb">
           <Link
             to="/"
             className="flex self-center text-2xl font-semibold whitespace-nowrap text-black"
           >
-            <img src="images/logo.png" className="h-20" alt="Logo" />
+            <img src="images/logo.png" className="h-12" alt="Logo" />
             {/* <span>EcoTrack</span> */}
           </Link>
           {!userToken ? (

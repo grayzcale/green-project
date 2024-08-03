@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import Cookies from "js-cookie";
+import "../assets/shadow_blur.css"
 
 const Footer = (props) => {
   const [userMenu, setUserMenu] = useState(false);
@@ -26,7 +27,7 @@ const Footer = (props) => {
   }
 
   return (
-    <footer className="shadow-2xl rounded-lg">
+    <footer className="sb">
       <div className="flex flex-row items-center justify-center">
         <Link to="/" className="p-5">
           <svg
