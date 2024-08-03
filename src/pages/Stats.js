@@ -9,9 +9,22 @@ import 'react-circular-progressbar/dist/styles.css';
 const Stats = () => {
 
 	const randomInt = () => Math.floor(Math.random() * 100) + 1;
-	const [cval, setCVal] = useState(randomInt());
+
+	const [v1, setv1] = useState(randomInt());
+	const [v2, setv2] = useState(randomInt());
+	const [v3, setv3] = useState(randomInt());
+	const [v4, setv4] = useState(randomInt());
+	const [v5, setv5] = useState(randomInt());
+
+	const [cval, setCVal] = useState(Math.ceil((v1 + v2 + v3 + v4 + v5) / 5));
 	const resetCVal = () => {
-		setCVal(randomInt());
+		setv1(randomInt());
+		setv2(randomInt());
+		setv3(randomInt());
+		setv4(randomInt());
+		setv5(randomInt());
+		console.log(v1, v2, v3, v4, v5);
+		setCVal(Math.ceil((v1 + v2 + v3 + v4 + v5) / 5));
 	}
 
 	const [graphRange, setGraphRange] = useState("monthly");
@@ -25,6 +38,7 @@ const Stats = () => {
 			newIndex = currIndex === 0 ? ranges.length - 1 : currIndex - 1;
 		}
 		setGraphRange(ranges[newIndex]);
+		
 		resetCVal();
 	}
 
@@ -32,10 +46,13 @@ const Stats = () => {
 		return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 	}
 
-	const getColor = () => {
-		const r = mapRange(cval, 0, 100, 200, 0);
-		const g = mapRange(cval, 0, 100, 0, 200);
-		console.log(`rgb(${r}, ${g}, 0)`);
+	const getColor = (v, color) => {
+		let r = mapRange(v, 0, 100, 200, 0);
+		const g = mapRange(v, 0, 100, 0, 200);
+		if (color) {
+			r = mapRange(v, 0, 100, 0, color[2]);
+			return `hsl(${color[0]}, ${color[1]}%, ${r}%)`; 
+		}
 		return `rgb(${r}, ${g}, 0)`;
 	}
 
@@ -51,7 +68,7 @@ const Stats = () => {
 					rotation: 1 / 2 + 1 / 8,
 					strokeLinecap: "round",
 					trailColor: "#000000",
-					pathColor: getColor(),
+					pathColor: getColor(cval),
 					textColor: '#000000',
 					trailColor: '#d6d6d6',
 					backgroundColor: '#3e98c7',
@@ -92,10 +109,16 @@ const Stats = () => {
 							<option>...</option>
 						</select>
 					)}
-					<img src="/images/placeholder_chart.png" alt="graph result"/>
-					<div className="grid px-2 grid-cols-4 grid-rows-1 text-xs">
+					<div className='grid grid-cols-5 w-30 gap-3' style={{ height: "200px" }}>
+						<div className='block w-full rounded-lg' style={{ backgroundColor: getColor(v1, [0, 100, 50]), height: `${v1 * 2}px`, position: "relative", top: `${(100 - v1) * 2}px` }}></div>
+						<div className='block w-full rounded-lg' style={{ backgroundColor: getColor(v2, [30, 100, 50]), height: `${v2 * 2}px`, position: "relative", top: `${(100 - v2) * 2}px` }}></div>
+						<div className='block w-full rounded-lg' style={{ backgroundColor: getColor(v3, [120, 100, 50]), height: `${v3 * 2}px`, position: "relative", top: `${(100 - v3) * 2}px` }}></div>
+						<div className='block w-full rounded-lg' style={{ backgroundColor: getColor(v4, [240, 100, 50]), height: `${v4 * 2}px`, position: "relative", top: `${(100 - v4) * 2}px` }}></div>
+						<div className='block w-full rounded-lg' style={{ backgroundColor: getColor(v5, [300, 100, 50]), height: `${v5 * 2}px`, position: "relative", top: `${(100 - v5) * 2}px` }}></div>
+					</div>
+					<div className="grid grid-cols-5 gap-3 text-xs">
 						<span className="text-center font-bold">
-							Public Transportation
+							Public Transport.
 						</span>
 						<span className="text-center font-bold">
 							Energy Efficiency
@@ -105,6 +128,9 @@ const Stats = () => {
 						</span>
 						<span className="text-center font-bold">
 							Sustainable Shopping
+						</span>
+						<span className="text-center font-bold">
+							Residential AP
 						</span>
 					</div>
 				</div>
