@@ -233,7 +233,7 @@ const Stats = () => {
           className="text-sm flex justify-center items-center font-bold text-white"
           to="/carbon_calculator"
         >
-          Click to take the Carbon Footprint Quiz
+          Carbon Footprint Quiz
         </Link>
       </div>
     </div>
