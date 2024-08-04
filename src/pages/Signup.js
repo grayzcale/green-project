@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Cookies from "js-cookie";
 
@@ -20,9 +20,9 @@ const Signup = () => {
             <input
               name="email"
               placeholder="Email"
-              className="p-4 mb-3 bg-[#DFEBBD] rounded-xl text-[#79B859] w-80"
+              className="p-3 mb-3 bg-[#DFEBBD] rounded-xl text-[#79B859] w-80"
               value={username}
-              onChange={(e) => setUsername({ email: e.target.value })}
+              onChange={(e) => setUsername(e.target.value)}
             />
           </div>
           <div className="space-y-2 flex flex-col justify-center items-center">
@@ -32,32 +32,13 @@ const Signup = () => {
               placeholder="Password"
               className="p-3 mb-4 bg-[#DFEBBD] rounded-xl text-[#79B859] w-80"
               value={password}
-              onChange={(e) => setPassword({ password: e.target.value })}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <div className="flex flex-col justify-center items-center">
             <button
               type="submit"
               className={`text-[#0A6EA666] w-1/2 mb-4 font-bold border border-[#0A6EA666]  focus:ring-0 focus:outline-none rounded-xl text-sm px-5 py-2.5 text-center`}
-              //   onClick={async () => {
-              //     let loginResult = await loginMutation({
-              //       email: user.email,
-              //       password: user.password,
-              //     });
-              //     if (loginResult?.data?.userLogin?.ok) {
-              //       setUser(userState);
-              //       Cookies.set("token", loginResult?.data?.userLogin?.token);
-              //       navigate("/");
-              //     } else {
-              //       setMessage({
-              //         message: "Something went wrong",
-              //         error: true,
-              //         confirmation: false,
-              //       });
-              //       setShowMessage(true);
-              //     }
-              //   }}
-              //   disabled={user.email === "" || user.password === ""}
               onClick={() => {
                 Cookies.set("userToken", "someToken");
                 navigate("/");
@@ -71,21 +52,21 @@ const Signup = () => {
             <div className="flex flex-wrap justify-center space-x-5 m-3 p-5">
               <div>
                 <div className="flex mb-8 items-center justify-center md:columns-3 md:block">
-                  <button className="p-4 mx-6 border">
+                  <button className="p-2 rounded-full mx-6 border">
                     <img
                       src="/images/samsung.png"
                       className="w-8 h-8"
                       alt="Samsung fitness sign in"
                     />
                   </button>
-                  <button className="p-4 mx-6 border">
+                  <button className="p-2 rounded-full mx-6 border">
                   <img
                     src="/images/google_health.png"
                     className="w-8 h-8"
                     alt="Google fit sign in"
                   />
                 </button>
-                  <button className="p-4 mx-6 border">
+                  <button className="p-2 rounded-full mx-6 border">
                     <img
                       src="/images/apple.png"
                       className="w-8 h-8"
@@ -94,14 +75,14 @@ const Signup = () => {
                   </button>
                 </div>
                 <div className="flex items-center justify-center md:columns-3 md:block">
-                  <button className="p-4 mx-6 border">
+                  <button className="p-2 rounded-full mx-6 border">
                     <img
                       src="/images/google.png"
                       className="w-8 h-8"
                       alt="Google sign in"
                     />
                   </button>
-                  <button className="p-4 mx-6 border">
+                  <button className="p-2 rounded-full mx-6 border">
                     <img
                       src="/images/presto.png"
                       className=" w-8 h-8"

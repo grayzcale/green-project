@@ -1,8 +1,4 @@
 export const menuItems = [
-//   {
-//     title: "Home",
-//     url: "/",
-//   },
   {
     title: "Account",
     url: "/account",
@@ -12,7 +8,7 @@ export const menuItems = [
     url: "/settings",
   },
   {
-    title: "Contact us",
+    title: "Contact Us",
     url: "contact",
   },
 ];
