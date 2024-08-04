@@ -142,7 +142,9 @@ const Stats = () => {
                 position: "relative",
                 top: `${(100 - v1) * 2}px`,
               }}
-            ></div>
+            >
+              <span className="block text-center mx-auto w-full text-xs font-bold" style={{ position: "relative", bottom: "17px" }}>{v1}%</span>
+            </div>
             <div
               className="block w-full rounded-lg"
               style={{
@@ -151,7 +153,9 @@ const Stats = () => {
                 position: "relative",
                 top: `${(100 - v2) * 2}px`,
               }}
-            ></div>
+            >
+              <span className="block text-center mx-auto w-full text-xs font-bold" style={{ position: "relative", bottom: "17px" }}>{v2}%</span>
+            </div>
             <div
               className="block w-full rounded-lg"
               style={{
@@ -160,7 +164,9 @@ const Stats = () => {
                 position: "relative",
                 top: `${(100 - v3) * 2}px`,
               }}
-            ></div>
+            >
+              <span className="block text-center mx-auto w-full text-xs font-bold" style={{ position: "relative", bottom: "17px" }}>{v3}%</span>
+            </div>
             <div
               className="block w-full rounded-lg"
               style={{
@@ -169,7 +175,9 @@ const Stats = () => {
                 position: "relative",
                 top: `${(100 - v4) * 2}px`,
               }}
-            ></div>
+            >
+              <span className="block text-center mx-auto w-full text-xs font-bold" style={{ position: "relative", bottom: "17px" }}>{v4}%</span>
+            </div>
             <div
               className="block w-full rounded-lg"
               style={{
@@ -178,10 +186,12 @@ const Stats = () => {
                 position: "relative",
                 top: `${(100 - v5) * 2}px`,
               }}
-            ></div>
+            >
+              <span className="block text-center mx-auto w-full text-xs font-bold" style={{ position: "relative", bottom: "17px" }}>{v5}%</span>
+            </div>
           </div>
           <div className="grid grid-cols-5 gap-3 text-xs">
-            <span className="text-center font-bold">Public Transport.</span>
+            <span className="text-center font-bold">Public Transport</span>
             <span className="text-center font-bold">Energy Efficiency</span>
             <span className="text-center font-bold">Fuel Consumption</span>
             <span className="text-center font-bold">Sustainable Shopping</span>
