@@ -90,7 +90,7 @@ const Stats = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="flex flex-wrap justify-center border-2 rounded-lg m-2 p-10">
-        <span className="pb-3 font-bold">Total Environmental Score</span>
+        <span className="pb-3 font-bold">EcoTrack Score</span>
         <CircularProgressbar
           className="size-36"
           value={cval}
