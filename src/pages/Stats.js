@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import "../assets/tiny_text.css";
 
 const Stats = () => {
   const randomInt = () => Math.floor(Math.random() * 100) + 1;
@@ -56,7 +57,7 @@ const Stats = () => {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="flex flex-wrap justify-center border-2 rounded-lg m-2 p-5">
+      <div className="flex flex-wrap justify-center border-2 rounded-lg m-2 p-10">
         <span className="pb-3 font-bold">Total Environmental Score</span>
         <CircularProgressbar
           className="size-36"
@@ -74,7 +75,7 @@ const Stats = () => {
           })}
         />
       </div>
-      <div className="flex flex-wrap justify-center space-x-5 border-2 rounded-lg m-2 mb-20 p-5">
+      <div className="flex flex-wrap justify-center border-2 rounded-lg m-2 p-5">
         <div className="">
           <div className="grid grid-cols-3">
             <button onClick={(event) => changeGraphRangeR(event, -1)}>
@@ -189,20 +190,23 @@ const Stats = () => {
             </div>
           </div>
           <div className="grid grid-cols-5 gap-3 text-xs">
-            <span className="text-center text-xs font-bold">Public Transport</span>
-            <span className="text-center text-xs font-bold">Energy Efficiency</span>
-            <span className="text-center text-xs font-bold">Fuel Consumption</span>
-            <span className="text-center text-xs font-bold">Sustainable Shopping</span>
-            <span className="text-center text-xs font-bold">Residential AP</span>
+            <span className="text-center font-bold text-xxs">Public Transport</span>
+            <span className="text-center text-xxs font-bold">Energy Efficiency</span>
+            <span className="text-center text-xxs font-bold">Fuel Consumption</span>
+            <span className="text-center text-xxs font-bold">Sustainable Shopping</span>
+            <span className="text-center text-xxs font-bold">Residential AP</span>
           </div>
         </div>
       </div>
-      <div className="w-80 p-4 rounded-xl bg-[#79B859] justify-center items-center">
+      <a className="m-3">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate arcu non faucibus commodo. Etiam eleifend vestibulum risus, nec molestie justo cursus non. Mauris scelerisque ornare massa a egestas.
+      </a>
+      <div className="w-80 p-3 rounded-xl bg-[#79B859] justify-center items-center">
         <Link
-          className="text-lg flex justify-center items-center text-[#484D6D]"
+          className="text-sm flex justify-center items-center font-bold text-white"
           to="/carbon_calculator"
         >
-          Carbon Footprint Quiz
+          Click to take the Carbon Footprint Quiz
         </Link>
       </div>
     </div>
