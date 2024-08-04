@@ -90,7 +90,7 @@ const Header = () => {
               to="/"
               className="flex self-center text-2xl mt-2 font-semibold whitespace-nowrap text-black"
             >
-              <img src="images/logo.png" className="h-16" alt="Logo" />
+              <img src="images/EcoTrackLogo.png" className="h-16" alt="Logo" />
             </Link>
             
             <button className="ml-6">
