@@ -23,7 +23,7 @@ const HomeTable = () => {
           <span className="inline-block text-right">42</span>
         </div>
 
-        <div className="bg-indigo-50 p-2 px-5 my-2 grid grid-cols-2 rounded-lg text-sm font-semibold shadow-md">
+        <div className="bg-gray-100 p-2 px-5 my-2 grid grid-cols-2 rounded-lg text-sm font-semibold shadow-md">
           <span className="inline-block text-left border-r-black">...</span>
           <span className="inline-block text-right ">...</span>
         </div>
