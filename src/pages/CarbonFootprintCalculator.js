@@ -88,7 +88,7 @@ const CarbonCalculatorFootprint = () => {
           className="start-button"
           onClick={() => setShowCalculator(true)}
         >
-          Start Carbon Emission Quiz
+          Start Quiz
         </button>
       )}
       {showCalculator && (
