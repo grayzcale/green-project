@@ -1,9 +1,9 @@
 const Conversation = (props) => {
   return (
     <div className="flex flex-col space-x-5 border-2 rounded-lg m-5 p-5 w-96" key={props.id}>
-      <h1 className="text-lg">{props.title}</h1>
+      <h1 className="text-lg font-bold mb-4">{props.title}</h1>
       <p className="">{props.body}</p>
-      <div className="flex">
+      <div className="flex mt-4">
         <div className="mx-4">
           <button>
             <svg
