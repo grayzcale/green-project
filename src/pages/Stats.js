@@ -199,7 +199,7 @@ const Stats = () => {
           </div>
         </div>
       </div>
-      <div className="fixed bottom-16 my-8 w-80 p-4 rounded-xl bg-[#79B859] justify-center items-center">
+      <div className="w-80 p-4 rounded-xl bg-[#79B859] justify-center items-center">
         <Link
           className="text-lg flex justify-center items-center text-[#484D6D]"
           to="/carbon_calculator"
