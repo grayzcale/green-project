@@ -93,6 +93,11 @@ const Header = () => {
             >
               <img src="images/logo.png" className="h-16" alt="Logo" />
             </Link>
+            
+            <button className="ml-20">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#dec45d" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#dec45d" className="size-6"><path strokeLinecap="round" strokeLinejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" /></svg>
+            </button>
+
             <button
               onClick={() => {
                 setMobileMenu(!mobileMenu);
@@ -123,7 +128,7 @@ const Header = () => {
                   onClick={() => {
                     setMobileMenu(!mobileMenu);
                   }}
-                  className={`${mobileMenu ? "" : "hidden"} ml-20`}
+                  className={`${mobileMenu ? "" : "hidden"} ml-8`}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
