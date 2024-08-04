@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.carbon-calculator {
+  font-family: 'Roboto', sans-serif;
+  color: #484D6D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: calc(100vh - 40px); /* Adjust to fit screen without header/footer */
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.start-button {
+  background-color: #57A773;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 15px 30px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 30px; /* Reduced margin to bring it closer */
+}
+
+.calculator-form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Reduced margin to bring it closer */
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 15px; /* Reduced margin for less space between inputs */
+}
+
+label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 5px; /* Reduced margin for less space between label and input */
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: right;
+}
+
+.calculate-button {
+  background-color: #57A773;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+.explanation {
+  margin-top: 30px;
+  max-width: 600px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #484D6D;
+}
+
+.chart {
+  display: table;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.chart th, .chart td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.chart th {
+  background-color: #57A773;
+  color: white;
+}
+
+.chart td {
+  background-color: #f9f9f9;
+}
+
+.chart td.meaning {
+  font-size: 14px; /* Reduced font size for the meaning column */
+}
