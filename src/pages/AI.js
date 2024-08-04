@@ -6,13 +6,13 @@ export default function AI() {
     const [inputValue, setInputValue] = useState('');
 
     const messagesArray = [
-        "Based on your energy consumption data, it looks like you’re using X kWh this month. You might want to consider switching to energy-efficient appliances or adjusting your thermostat to save energy.",
-        "Your fuel consumption this month is Y gallons. To reduce your carbon footprint, you could explore carpooling, public transportation, or switching to a more fuel-efficient vehicle.",
-        "Your average commute duration is Z minutes. If you're looking to reduce this time, you might consider working from home if possible or optimizing your route.",
-        "The air pollution level in your area is currently at W stage. It’s a good idea to limit outdoor activities on days when pollution levels are high.",
-        "Your electricity usage is A kWh this month. To improve efficiency, you could look into using smart plugs, LED lighting, or scheduling usage during off-peak hours.",
-        "You’ve purchased B items this month. Consider focusing on reducing waste by buying in bulk, choosing sustainable products, or minimizing single-use items."
-    ];
+        "Hello, I’m Sprout! Based on your energy consumption data, it looks like you’re using X kWh this month. You might want to consider switching to energy-efficient appliances or adjusting your thermostat to save energy.",
+        "Hey, I’m Sprout! Your fuel consumption this month is Y gallons. To reduce your carbon footprint, you could explore carpooling, public transportation, or switching to a more fuel-efficient vehicle.",
+        "Hi, I’m Sprout! Your average commute duration is Z minutes. If you're looking to reduce this time, you might consider working from home if possible or optimizing your route.",
+        "Greetings, I’m Sprout! The air pollution level in your area is currently at W stage. It’s a good idea to limit outdoor activities on days when pollution levels are high.",
+        "Good day, I’m Sprout! Your electricity usage is A kWh this month. To improve efficiency, you could look into using smart plugs, LED lighting, or scheduling usage during off-peak hours.",
+        "Hey there, I’m Sprout! You’ve purchased B items this month. Consider focusing on reducing waste by buying in bulk, choosing sustainable products, or minimizing single-use items."
+        ];
 
     const getMessage = () => {
         const randomIndex = Math.floor(Math.random() * messagesArray.length);
