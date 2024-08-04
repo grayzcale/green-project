@@ -20,11 +20,11 @@ const Flower = () => {
           if (flower === flowerArr.length - 1) {
             setFlower(0);
           } else {
-            setFlower(flower + 1);
+            setFlower(flower + 1)
           }
         }}
       >
-        <ScorePoint point={0} score={0} />
+        <ScorePoint point={5} score={27} />
         <img
           src={`images/${flowerArr[flower]}`}
           className="w-64 h-64"
