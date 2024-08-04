@@ -1,5 +1,4 @@
 import { useState } from "react";
-import ScorePoint from "../components/ScorePoint";
 import "../assets/hc.css";
 import { Link } from "react-router-dom";
 
@@ -57,7 +56,6 @@ const Stats = () => {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <ScorePoint />
       <div className="flex flex-wrap justify-center border-2 rounded-lg m-2 p-5">
         <span className="pb-3 font-bold">Total Environmental Score</span>
         <CircularProgressbar
@@ -191,11 +189,11 @@ const Stats = () => {
             </div>
           </div>
           <div className="grid grid-cols-5 gap-3 text-xs">
-            <span className="text-center font-bold">Public Transport</span>
-            <span className="text-center font-bold">Energy Efficiency</span>
-            <span className="text-center font-bold">Fuel Consumption</span>
-            <span className="text-center font-bold">Sustainable Shopping</span>
-            <span className="text-center font-bold">Residential AP</span>
+            <span className="text-center text-xs font-bold">Public Transport</span>
+            <span className="text-center text-xs font-bold">Energy Efficiency</span>
+            <span className="text-center text-xs font-bold">Fuel Consumption</span>
+            <span className="text-center text-xs font-bold">Sustainable Shopping</span>
+            <span className="text-center text-xs font-bold">Residential AP</span>
           </div>
         </div>
       </div>

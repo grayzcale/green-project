@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Tips from "../components/Tips";
 import Leaderboard from "../components/Leaderboard";
+import ScorePoint from "../components/ScorePoint";
 
 const flowerArr = [
   "Flower_stg1.png",
@@ -13,13 +14,17 @@ const Flower = () => {
   const [flower, setFlower] = useState(0);
   return (
     <div className="flex flex-col justify-center items-center">
-      <button className="rounded-full" onClick={() => {
-        if (flower === flowerArr.length-1) {
+      <button
+        className="rounded-full"
+        onClick={() => {
+          if (flower === flowerArr.length - 1) {
             setFlower(0);
-        } else {
-            setFlower(flower+1);
-        }
-      }}>
+          } else {
+            setFlower(flower + 1);
+          }
+        }}
+      >
+        <ScorePoint point={1} score={1} />
         <img
           src={`images/${flowerArr[flower]}`}
           className="w-64 h-64"
