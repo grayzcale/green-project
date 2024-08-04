@@ -24,7 +24,7 @@ const Flower = () => {
           }
         }}
       >
-        <ScorePoint point={1} score={1} />
+        <ScorePoint point={0} score={0} />
         <img
           src={`images/${flowerArr[flower]}`}
           className="w-64 h-64"
