@@ -23,7 +23,6 @@ h1 {
   padding: 15px 30px;
   font-size: 24px;
   cursor: pointer;
-  margin-top: 30px; /* Reduced margin to bring it closer */
 }
 
 .calculator-form {
