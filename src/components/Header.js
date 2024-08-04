@@ -42,8 +42,7 @@ const Header = () => {
               fill="none"
               stroke="currentColor"
               className="w-8 h-8"
-              viewBox="0 0 24 24"
-            >
+              viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -123,12 +122,12 @@ const Header = () => {
             </button>
 
             {mobileMenu ? (
-              <div className="flex flex-col pr-10">
+              <div className="flex flex-col pr-8">
                 <button
                   onClick={() => {
                     setMobileMenu(!mobileMenu);
                   }}
-                  className={`${mobileMenu ? "" : "hidden"} ml-8`}
+                  className={`${mobileMenu ? "" : "hidden"}`}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -145,7 +144,7 @@ const Header = () => {
                     />
                   </svg>
                 </button>
-                <Navbar additionalStyles="space-y-6 py-2 bg-gray-200 pr-10 justify-left items-left mt-10 ml-1 absolute space-x-6 text-gray-700 "/>
+                <Navbar additionalStyles="space-y-6 py-2 bg-gray-200 pr-2 justify-left items-left mt-10 ml-1 absolute space-x-6 text-gray-700 right-1"/>
               </div>
             ) : null}
           </div>

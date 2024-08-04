@@ -6,7 +6,7 @@ const MenuItems = (props) => {
     <li className="" key={props.index}>
       <Link
         to={props.item.url}
-        className={`${props.item.url === "/account" ? "ml-4" : ""}`}
+        className={`${props.item.url === "/account" ? "ml-6" : ""}`}
       >
         {props.item.title}
       </Link>
