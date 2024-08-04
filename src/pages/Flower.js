@@ -32,11 +32,11 @@ const Flower = () => {
         />
       </button>
 
-      <Tips
+      {/* <Tips
         tips={
           "An air pollution map shows pollutant levels across regions using color codes and markers. It highlights areas with poor air quality, tracks pollution sources, and trends. These maps are vital for monitoring, public health, and policy-making."
         }
-      />
+      /> */}
       <Leaderboard />
     </div>
   );
