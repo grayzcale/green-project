@@ -57,21 +57,21 @@ const Login = () => {
             <div className="flex flex-wrap justify-center space-x-5 m-3 p-5">
               <div>
                 <div className="flex mb-8 items-center justify-center md:columns-3 md:block">
-                  <button className="p-4 mx-6 border">
+                  <button className="p-2 rounded-full mx-6 border">
                     <img
                       src="/images/samsung.png"
                       className="w-8 h-8"
                       alt="Samsung fitness sign in"
                     />
                   </button>
-                  <button className="p-4 mx-6 border">
+                  <button className="p-2 rounded-full mx-6 border">
                   <img
                     src="/images/google_health.png"
                     className="w-8 h-8"
                     alt="Google fit sign in"
                   />
                 </button>
-                  <button className="p-4 mx-6 border">
+                  <button className="p-2 rounded-full mx-6 border">
                     <img
                       src="/images/apple.png"
                       className="w-8 h-8"
@@ -80,14 +80,14 @@ const Login = () => {
                   </button>
                 </div>
                 <div className="flex items-center justify-center md:columns-3 md:block">
-                  <button className="p-4 mx-6 border">
+                  <button className="p-2 rounded-full mx-6 border">
                     <img
                       src="/images/google.png"
                       className="w-8 h-8"
                       alt="Google sign in"
                     />
                   </button>
-                  <button className="p-4 mx-6 border">
+                  <button className="p-2 rounded-full mx-6 border">
                     <img
                       src="/images/presto.png"
                       className=" w-8 h-8"
