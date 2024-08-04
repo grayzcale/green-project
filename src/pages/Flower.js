@@ -24,7 +24,7 @@ const Flower = () => {
           }
         }}
       >
-        <ScorePoint point={1} score={1} />
+        <ScorePoint point={0} score={0} />
         <img
           src={`images/${flowerArr[flower]}`}
           className="w-64 h-64"
@@ -32,11 +32,11 @@ const Flower = () => {
         />
       </button>
 
-      <Tips
+      {/* <Tips
         tips={
           "An air pollution map shows pollutant levels across regions using color codes and markers. It highlights areas with poor air quality, tracks pollution sources, and trends. These maps are vital for monitoring, public health, and policy-making."
         }
-      />
+      /> */}
       <Leaderboard />
     </div>
   );

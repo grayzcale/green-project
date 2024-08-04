@@ -6,24 +6,56 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "../assets/tiny_text.css";
 
+import { useSpring, animated } from 'react-spring';
+
 const Stats = () => {
   const randomInt = () => Math.floor(Math.random() * 100) + 1;
+  const getRandomList = () => {
+    const list = [];
+    for (let i = 0; i < 5; i++) {
+      list.push(randomInt());
+    }
+    return list;
+  }
 
-  const [v1, setv1] = useState(randomInt());
-  const [v2, setv2] = useState(randomInt());
-  const [v3, setv3] = useState(randomInt());
-  const [v4, setv4] = useState(randomInt());
-  const [v5, setv5] = useState(randomInt());
+  const [values, setValues] = useState(getRandomList());
+  const [cval, setCVal] = useState(Math.ceil(values.reduce((acc, val) => acc + val, 0) / 5));
 
-  const [cval, setCVal] = useState(Math.ceil((v1 + v2 + v3 + v4 + v5) / 5));
+  const v1 = useSpring({
+    height: `${values[0] * 2}px`,
+    top: `${(100 - values[0]) * 2}px`,
+    config: { tension: 170, friction: 26 },
+  })
+
+  const v2 = useSpring({
+    height: `${values[1] * 2}px`,
+    top: `${(100 - values[1]) * 2}px`,
+    config: { tension: 170, friction: 26 },
+  })
+
+  const v3 = useSpring({
+    height: `${values[2] * 2}px`,
+    top: `${(100 - values[2]) * 2}px`,
+    config: { tension: 170, friction: 26 },
+  })
+
+  const v4 = useSpring({
+    height: `${values[3] * 2}px`,
+    top: `${(100 - values[3]) * 2}px`,
+    config: { tension: 170, friction: 26 },
+  })
+
+  const v5 = useSpring({
+    height: `${values[4] * 2}px`,
+    top: `${(100 - values[4]) * 2}px`,
+    config: { tension: 170, friction: 26 },
+  })
+
   const resetCVal = () => {
-    setv1(randomInt());
-    setv2(randomInt());
-    setv3(randomInt());
-    setv4(randomInt());
-    setv5(randomInt());
-    console.log(v1, v2, v3, v4, v5);
-    setCVal(Math.ceil((v1 + v2 + v3 + v4 + v5) / 5));
+    const list = getRandomList();
+    setValues(list);
+    console.log(values);
+    setCVal(Math.ceil(list.reduce((acc, val) => acc + val, 0) / 5));
   };
 
   const [graphRange, setGraphRange] = useState("monthly");
@@ -58,7 +90,7 @@ const Stats = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="flex flex-wrap justify-center border-2 rounded-lg m-2 p-10">
-        <span className="pb-3 font-bold">Total Environmental Score</span>
+        <span className="pb-3 font-bold">EcoTrack Score</span>
         <CircularProgressbar
           className="size-36"
           value={cval}
@@ -133,61 +165,56 @@ const Stats = () => {
             className="grid grid-cols-5 w-30 gap-3"
             style={{ height: "200px" }}
           >
-            <div
+            <animated.div
               className="block w-full rounded-lg"
               style={{
-                backgroundColor: getColor(v1, [200, 64, 61]),
-                height: `${v1 * 2}px`,
+                ...v1,
+                backgroundColor: getColor(values[0], [200, 64, 61]),
                 position: "relative",
-                top: `${(100 - v1) * 2}px`,
               }}
             >
-              <span className="block text-center mx-auto w-full text-xs font-bold" style={{ position: "relative", bottom: "17px" }}>{v1}%</span>
-            </div>
-            <div
+              <span className="block text-center mx-auto w-full text-xs font-bold" style={{ position: "relative", bottom: "17px" }}>{values[0]}%</span>
+            </animated.div>
+            <animated.div
               className="block w-full rounded-lg"
               style={{
-                backgroundColor: getColor(v2, [135, 53, 63]),
-                height: `${v2 * 2}px`,
+                ...v2,
+                backgroundColor: getColor(values[1], [135, 53, 63]),
                 position: "relative",
-                top: `${(100 - v2) * 2}px`,
               }}
             >
-              <span className="block text-center mx-auto w-full text-xs font-bold" style={{ position: "relative", bottom: "17px" }}>{v2}%</span>
-            </div>
-            <div
+              <span className="block text-center mx-auto w-full text-xs font-bold" style={{ position: "relative", bottom: "17px" }}>{values[1]}%</span>
+            </animated.div>
+            <animated.div
               className="block w-full rounded-lg"
               style={{
-                backgroundColor: getColor(v3, [265, 46, 68]),
-                height: `${v3 * 2}px`,
+                ...v3,
+                backgroundColor: getColor(values[2], [265, 46, 68]),
                 position: "relative",
-                top: `${(100 - v3) * 2}px`,
               }}
             >
-              <span className="block text-center mx-auto w-full text-xs font-bold" style={{ position: "relative", bottom: "17px" }}>{v3}%</span>
-            </div>
-            <div
+              <span className="block text-center mx-auto w-full text-xs font-bold" style={{ position: "relative", bottom: "17px" }}>{values[2]}%</span>
+            </animated.div>
+            <animated.div
               className="block w-full rounded-lg"
               style={{
-                backgroundColor: getColor(v4, [26, 64, 56]),
-                height: `${v4 * 2}px`,
+                ...v4,
+                backgroundColor: getColor(values[3], [26, 64, 56]),
                 position: "relative",
-                top: `${(100 - v4) * 2}px`,
               }}
             >
-              <span className="block text-center mx-auto w-full text-xs font-bold" style={{ position: "relative", bottom: "17px" }}>{v4}%</span>
-            </div>
-            <div
+              <span className="block text-center mx-auto w-full text-xs font-bold" style={{ position: "relative", bottom: "17px" }}>{values[3]}%</span>
+            </animated.div>
+            <animated.div
               className="block w-full rounded-lg"
               style={{
-                backgroundColor: getColor(v5, [338, 53, 62]),
-                height: `${v5 * 2}px`,
+                ...v5,
+                backgroundColor: getColor(values[4], [338, 53, 62]),
                 position: "relative",
-                top: `${(100 - v5) * 2}px`,
               }}
             >
-              <span className="block text-center mx-auto w-full text-xs font-bold" style={{ position: "relative", bottom: "17px" }}>{v5}%</span>
-            </div>
+              <span className="block text-center mx-auto w-full text-xs font-bold" style={{ position: "relative", bottom: "17px" }}>{values[4]}%</span>
+            </animated.div>
           </div>
           <div className="grid grid-cols-5 gap-3 text-xs">
             <span className="text-center font-bold text-xxs">Public Transport</span>

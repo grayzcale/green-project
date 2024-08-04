@@ -16,6 +16,7 @@ import DeleteAccount from "./pages/DeleteAccount";
 import CarbonCalculatorFootprint from "./pages/CarbonFootprintCalculator";
 import Flower from "./pages/Flower";
 import GreenCard from "./pages/GreenCard";
+import AI from "./pages/AI";
 
 import Layout from "./components/Layout";
 
@@ -41,6 +42,7 @@ function App() {
           <Route path="/carbon_calculator" element={<CarbonCalculatorFootprint/>} />
           <Route path="/flower" element={<Flower />} />
           <Route path="/green-card" element={<GreenCard />} />
+          <Route path="/ai" element={<AI />} />
         </Route>
       </Routes>
     </BrowserRouter>

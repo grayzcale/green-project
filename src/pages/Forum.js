@@ -7,7 +7,7 @@ const Forum = () => {
       <div className="mt-5">
         <SearchBar info={conversations} />
       </div>
-      <button className="fixed bottom-28 right-5 p-4 bg-[#9FDEEB] rounded-full">
+      <button className="fixed bottom-28 right-5 p-4 bg-[#5dbccf] rounded-full">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

@@ -10,19 +10,22 @@ const articles = [
   {
     src: "/images/article.jpg",
     alt: "alt",
-    title: "Why Toronto needs to embrace e-scooters: A path to a more connected and a sustainable Toronto",
+    title:
+      "Why Toronto needs to embrace e-scooters: A path to a more connected and a sustainable Toronto",
     body: "Shared e-scooters have the potential to propel Toronto forward, enhancing its role as a global hub for jobs and innovation. They can connect our communities, ease traffic congestion, boost the local economy, and help meet our climate and transportation goals.",
   },
   {
     src: "/images/article2.jpg",
     alt: "alt",
-    title: "Toronto skin-care company founder stays true to mission of offering stylish, sustainable products",
+    title:
+      "Toronto skin-care company founder stays true to mission of offering stylish, sustainable products",
     body: "Reviews and recommendations are unbiased and products are independently selected. Postmedia may earn an affiliate commission from purchases made through links on this page. A fan of the luxe natural skin-care brands she had encountered from Europe, Gaelyne Leslie set out to create a similar line of her own in 2010.",
   },
   {
     src: "/images/article3.jpg",
     alt: "alt",
-    title: "Author shares tips to save thousands of dollars with greener habits",
+    title:
+      "Author shares tips to save thousands of dollars with greener habits",
     body: "Candice Batista is founder and editor-in-chief of The Eco Hub, a green lifestyle website, and the author of a new book, Sustained: Creating a Sustainable House Through Small Changes, Money-Saving Habits, and Natural Solutions. She spoke to us from her home in Toronto, where she lives with her husb",
   },
 ];
@@ -39,7 +42,6 @@ const Home = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="flex items-center justify-center mx-6 mb-4 mt-2 w-3/4">
-        
         <News
           src={articles[article].src}
           alt={articles[article].alt}
@@ -48,7 +50,7 @@ const Home = () => {
         />
         <button
           onClick={() => {
-            if (article === articles.length-1) {
+            if (article === articles.length - 1) {
               setArticle(0);
             } else {
               setArticle(article + 1);
@@ -71,7 +73,61 @@ const Home = () => {
           </svg>
         </button>
       </div>
-      <div>
+      <div className="pb-20">
+        <div className="w-full">
+          <table className="w-full">
+            <caption className="p-3 font-bold text-lg">Recent Activity</caption>
+            <thead className="bg-slate-50">
+              <tr>
+                <th className="text-left text-xs p-2">Activity</th>
+                <th
+                  className="text-center text-xs p-2"
+                  style={{ width: "30%" }}
+                >
+                  Points Earned
+                </th>
+              </tr>
+            </thead>
+            <tbody className="text-sm">
+              <tr
+                className="bg-slate-200"
+                style={{ backgroundColor: "#bfdba7" }}
+              >
+                <td className="text-left p-2">
+                  Took a train to Toronto on August 4th
+                </td>
+                <td className="text-center p-2">32</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="text-left p-2">Ran 6.7 km on August 1st</td>
+                <td className="text-center p-2">7</td>
+              </tr>
+              <tr
+                className="bg-slate-200"
+                style={{ backgroundColor: "#bfdba7" }}
+              >
+                <td className="text-left p-2">
+                  Auto-loaded your Presto Card for $100
+                </td>
+                <td className="text-center p-2">42</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="text-left p-2">...</td>
+                <td className="text-center p-2">...</td>
+              </tr>
+              <tr
+                className="bg-slate-200"
+                style={{ backgroundColor: "#bfdba7" }}
+              >
+                <td className="text-left p-2">...</td>
+                <td className="text-center p-2">...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      {/* <div>
+>>>>>>> 60246aae354df8dca53335400d3563d20339bfb8
         <MostRecentActivity />
         <Link
           to="/recent_activity"
@@ -79,7 +135,7 @@ const Home = () => {
         >
           View More
         </Link>
-      </div>
+      </div> */}
 
       <div className="fixed bottom-16 my-8 w-80 p-4 rounded-xl bg-[#79B859] justify-center items-center">
         <Link
