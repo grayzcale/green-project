@@ -3,6 +3,7 @@ const LandingPage = () => {
   return (
     <div className="flex flex-col mt-60 align-center items-center">
       <img src="/images/logo.png" alt="main logo" />
+      <span className="text-lg font:mono">Measure, Reduce, & Celebrate!</span>
       <Link to="/login" className="mt-14 p-2 my-4 text-[#79B859] bg-[#DFEBBD] w-60 text-xl text-center rounded-xl">
         Login
       </Link>

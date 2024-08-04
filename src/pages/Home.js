@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import ScorePoint from "../components/ScorePoint";
 import Cookies from "js-cookie";
 import Login from "./Login";
 
@@ -12,9 +11,9 @@ const Home = () => {
   }
 
   return (
-    <div className="">
-      <ScorePoint />
-      <img src="" alt="Tree" className="h-30 w-30" />
+    <div className="flex flex-col justify-center items-center">
+      <div className="">PUT NEWS STUFF HERE</div>
+      <div>PUT RECENT ACTIVITY HERE (transit, health app, purchases)</div>
     </div>
   );
 };

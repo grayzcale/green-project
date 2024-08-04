@@ -21,7 +21,7 @@ const Login = () => {
             <input
               name="email"
               placeholder="Email"
-              className="p-4 mb-3 bg-[#DFEBBD] rounded-xl text-[#79B859] w-80"
+              className="p-3 mb-3 bg-[#DFEBBD] rounded-xl text-[#79B859] w-80"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />

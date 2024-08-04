@@ -1,9 +1,9 @@
 const Tips = (props) => {
   return (
-    <div className="flex justify-center space-x-5 border-2 rounded-2xl mx-5 px-5 bg-[#9FDEEB]">
+    <div className="flex justify-center space-x-5 py-2  px-5 ">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="w-60 h-60"
+        className="w-60 h-30"
         viewBox="0 0 32 32"
       >
         <path
