@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import NotificationBar from "./NotificationBar";
 import { Link, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
+import Navbar from "./Navbar";
 
 const Header = () => {
   const [userMenu, setUserMenu] = useState(false);
@@ -31,7 +31,6 @@ const Header = () => {
           <Link to="/" className="text-white">
             <img src="/images/logo.png" className="mr-3 h-8" alt="Logo" />
           </Link>
-          <NotificationBar additionalStyles="flex space-x-4 text-white" />
           <button
             onClick={() => {
               setUserMenu(!userMenu);
@@ -98,26 +97,28 @@ const Header = () => {
               onClick={() => {
                 setMobileMenu(!mobileMenu);
               }}
-              className={`${mobileMenu ? "hidden" : " mr-2"}`}
+              className={`${mobileMenu ? "hidden" : " mr-8"}`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-10 h-10"
-                stroke="ffffff"
                 fill="none"
+                stroke="#79B859"
+                strokeWidth="1"
+                aria-hidden="true"
+                className="w-10 h-10"
+                data-slot="icon"
                 viewBox="0 0 24 24"
               >
                 <path
-                  stroke="#79B859"
                   strokeLinecap="round"
-                  strokeWidth="1.25"
-                  d="M9.107 2.674A6.52 6.52 0 0 1 12 2c3.727 0 6.75 3.136 6.75 7.005v.705a4.4 4.4 0 0 0 .692 2.375l1.108 1.724c1.011 1.575.239 3.716-1.52 4.214a25.775 25.775 0 0 1-14.06 0c-1.759-.498-2.531-2.639-1.52-4.213l1.108-1.725A4.4 4.4 0 0 0 5.25 9.71v-.705c0-1.074.233-2.092.65-3.002M7.5 19c.655 1.748 2.422 3 4.5 3 .245 0 .485-.017.72-.05M16.5 19a4.498 4.498 0 0 1-1.302 1.84"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                 />
               </svg>
             </button>
 
             {mobileMenu ? (
-              <div className="flex flex-col">
+              <div className="flex flex-col pr-10">
                 <button
                   onClick={() => {
                     setMobileMenu(!mobileMenu);
@@ -139,7 +140,7 @@ const Header = () => {
                     />
                   </svg>
                 </button>
-                <NotificationBar additionalStyles="space-y-4 py-2 bg-gray-200 absolute space-x-4 text-gray-700 w-[120px] mt-2 " />
+                <Navbar additionalStyles="space-y-6 py-2 bg-gray-200 pr-10 justify-left items-left mt-10 ml-1 absolute space-x-6 text-gray-700 "/>
               </div>
             ) : null}
           </div>

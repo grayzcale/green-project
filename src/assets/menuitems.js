@@ -8,7 +8,7 @@ export const menuItems = [
     url: "/settings",
   },
   {
-    title: "Contact us",
+    title: "Contact Us",
     url: "contact",
   },
 ];

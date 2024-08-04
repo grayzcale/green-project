@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
@@ -14,6 +13,7 @@ import Contact from "./pages/Contact";
 import Setting from "./pages/Setting";
 import SentEmail from "./pages/SentEmail";
 import DeleteAccount from "./pages/DeleteAccount";
+import Flower from "./pages/Flower";
 
 import Layout from "./components/Layout";
 
@@ -36,39 +36,11 @@ function App() {
           <Route path="/redirect" element={<Navigate to="/login" />} />
           <Route path="/delete_account" element={<DeleteAccount />} />
           <Route path="/landing_page" element={<LandingPage />} />
+          <Route path="/flower" element={<Flower />} />
         </Route>
       </Routes>
     </BrowserRouter>
   );
 }
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// function App() {
-// 	return (
-// 		<h1 className="text-3xl font-bold underline">
-// 			Hello world!
-// 		</h1>
-// 	)
-// }
 
 export default App;

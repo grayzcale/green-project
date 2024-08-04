@@ -5,6 +5,7 @@ const Account = () => {
       <input type="text" placeholder="email" className="border my-2 p-2"/>
       <input type="text" placeholder="password" className="border my-2 p-2"/>
       <button className="border p-2 my-2">Save changes</button>
+      <button className="border p-2 my-2 text-white bg-red-500">Lock card</button>
     </div>
   );
 };
