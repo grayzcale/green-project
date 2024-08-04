@@ -1,6 +1,6 @@
 const Conversation = (props) => {
   return (
-    <div className="flex flex-col space-x-5 border-2 rounded-lg m-5 p-5 w-96 bg-green-100 shadow-md" key={props.id}>
+    <div className="flex flex-col space-x-5 border-2 rounded-lg m-5 p-5 w-96 bg-[#C3DF89] shadow-md" key={props.id}>
       <h1 className="text-lg font-bold mb-4">{props.title}</h1>
       <p className="">{props.body}</p>
       <div className="flex mt-4">
