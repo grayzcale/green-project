@@ -18,7 +18,7 @@ const data = [
 const MostRecentActivity = () => {
   return (
     <>
-      <h1 className="text-xl">Most Recent Activity</h1>
+      <h1 className="text-xl font-bold text-center bg-slate-200 w-full">Most Recent Activity</h1>
       {data.map((activity, idx) => {
         return (
           <div key={idx} className="flex flex-col">
