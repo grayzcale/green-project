@@ -24,7 +24,7 @@ const Home = () => {
             </tr>
           </thead>
           <tbody className="text-sm">
-            <tr className="bg-slate-200">
+            <tr className="bg-slate-200" style={{ backgroundColor: "#94b07b" }}>
               <td className="text-left p-2">Took a train to Toronto on August 4th</td>
               <td className="text-center p-2">32</td>
             </tr>
@@ -32,7 +32,7 @@ const Home = () => {
               <td className="text-left p-2">Ran 6.7 km on August 1st</td>
               <td className="text-center p-2">7</td>
             </tr>
-            <tr className="bg-slate-200">
+            <tr className="bg-slate-200" style={{ backgroundColor: "#94b07b" }}>
               <td className="text-left p-2">Auto-loaded your Presto Card for $100</td>
               <td className="text-center p-2">42</td>
             </tr>
@@ -40,7 +40,7 @@ const Home = () => {
               <td className="text-left p-2">...</td>
               <td className="text-center p-2">...</td>
             </tr>
-            <tr className="bg-slate-200">
+            <tr className="bg-slate-200" style={{ backgroundColor: "#94b07b" }}>
               <td className="text-left p-2">...</td>
               <td className="text-center p-2">...</td>
             </tr>
