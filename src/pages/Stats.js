@@ -46,8 +46,8 @@ const Stats = () => {
   };
 
   const getColor = (v, color) => {
-    let r = mapRange(v, 0, 100, 200, 0);
-    const g = mapRange(v, 0, 100, 0, 200);
+    let r = mapRange(v, 0, 100, 255, 0);
+    const g = mapRange(v, 0, 100, 0, 255);
     if (color) {
       // r = mapRange(v, 0, 100, 0, color[2]);
       return `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`;
