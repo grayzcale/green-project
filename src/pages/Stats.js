@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../assets/hc.css";
 import { Link } from "react-router-dom";
+import Tips from "../components/Tips";
 
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
@@ -225,9 +226,10 @@ const Stats = () => {
           </div>
         </div>
       </div>
-      <span className="m-3">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate arcu non faucibus commodo. Etiam eleifend vestibulum risus, nec molestie justo cursus non. Mauris scelerisque ornare massa a egestas.
-      </span>
+      <Tips
+        tips={
+          "Consider an electric or hybrid vehicle: These vehicles have lower emissions than conventional gasoline cars."
+        }/>
       <div className="w-80 p-3 rounded-xl bg-[#79B859] justify-center items-center">
         <Link
           className="text-sm flex justify-center items-center font-bold text-white"
