@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import Setting from "./pages/Setting";
 import SentEmail from "./pages/SentEmail";
 import DeleteAccount from "./pages/DeleteAccount";
+import CarbonCalculatorFootprint from "./pages/CarbonFootprintCalculator";
 import Flower from "./pages/Flower";
 
 import Layout from "./components/Layout";
@@ -36,6 +37,7 @@ function App() {
           <Route path="/redirect" element={<Navigate to="/login" />} />
           <Route path="/delete_account" element={<DeleteAccount />} />
           <Route path="/landing_page" element={<LandingPage />} />
+          <Route path="/carbon_calculator" element={<CarbonCalculatorFootprint/>} />
           <Route path="/flower" element={<Flower />} />
         </Route>
       </Routes>
