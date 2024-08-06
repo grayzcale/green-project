@@ -3,11 +3,14 @@ const GreenCard = () => {
     <div className="flex h-full flex-col justify-center items-center">
       <div className="bg-slate-300 p-3 w-52 rounded-2xl text-center">
         <span className="text-sm">EcoTrack Score: 82%</span>
-        <span className="block text-gray-800 text-2xl font-bold">2x Points</span>
+        <span className="block text-gray-800 text-2xl font-bold">
+          2x Points
+        </span>
       </div>
+      <img src="/images/logo_single.png" alt="logo" />
       <img
-        src="images/greencard.jpg"
-        className="my-4 w-64 h-64"
+        src="images/barcode.png"
+        className="my-4 w-64 h-20"
         alt="green card"
       />
       <div className="flex">
