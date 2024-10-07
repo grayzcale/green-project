@@ -1,6 +1,6 @@
 <img src="https://github.com/grayzcale/green-project/blob/master/public/images/EcoTrackLogo.png" alt="logo" width="700" height="200" />
 
-This website was built for the 2024 TerraHacks competition using React for the front-end. EcoTracks is a mobile application designed to raise awareness of carbon footprints while incorporating an incentive program. Users can sign up to earn points by adopting sustainable practices, such as using public transportation, which not only rewards them but also contributes to tree-planting initiatives.
+This website was built for the 2024 TerraHacks competition using React for the front-end. EcoTrack is a mobile application designed to raise awareness of carbon footprints while incorporating an incentive program. Users can sign up to earn points by adopting sustainable practices, such as using public transportation, which not only rewards them but also contributes to tree-planting initiatives.
 
 ## demo images
 <div>
